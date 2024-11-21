@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Edit Activities | Hope Haven Leadership Institute{% endblock %}
+
+{% block content %}
+    <form action="{% url 'edit_act' pk=pk %}" method="post">
+      {% csrf_token %}
+      <select name="assigned" value="{{assigned}}">
+        <option>All Students</option>
+        <option>All Staff</option>
+        <option>All Students and Staff</option>
+        <option>Some Student</option>
+      </select>
+      <input type="text" name="description" value="{{ description }}">
+      <input type="text" name="supervisor" value="{{supervisor">
+      <input type="text" name="time_range" value="{{time_range}}">
+      <input type="text" name="needed" value="{{needed}}">
+      <input type="upload" name="image" value="{{image}}">
+      
+      <input type="submit" value="Update">
+    </form>
+{% endblock %}
