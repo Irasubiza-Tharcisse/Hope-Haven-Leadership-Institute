@@ -1,10 +1,20 @@
 from django.http.response import HttpResponse
 from django.shortcuts import render, redirect
 
+<<<<<<< HEAD
+=======
+from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
+
+>>>>>>> 5f3ab9e (Hope Haven L weApp)
 from leadership.models import Leadership_team, ContactForm
 from Blogs.models import activities,testimonial
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5f3ab9e (Hope Haven L weApp)
 def index_view(request):
   team_members = Leadership_team.objects.all()
   testimonial_members = testimonial.objects.all()
@@ -75,3 +85,20 @@ def contactF(request):
     contact.save()
     return redirect(contact_view)
   return redirect(index_view)
+<<<<<<< HEAD
+=======
+
+def loginform_view(request):
+  if request.method == 'POST':
+    email = request.POST.get('email')
+    password = request.POST.get('password')
+    user = authenticate(request, email=email, password=password)
+    if user is not None:
+      login(request, user)
+      messages.success(request, 'You are now logged in')
+      return redirect(loginform_view)
+    else:
+      messages.error(request, 'Invalid email or password')
+      return redirect(loginform_view)return redirect(loginform_view)
+  return render(request, 'loginform.html')
+>>>>>>> 5f3ab9e (Hope Haven L weApp)

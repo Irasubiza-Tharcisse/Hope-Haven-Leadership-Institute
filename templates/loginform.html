@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 {% extend 'base.html' %}
+=======
+{% extends 'base.html' %}
+>>>>>>> 5f3ab9e (Hope Haven L weApp)
 {% load static %}
 {% block title %} Login page | Hope haven {% endblock %}
 
@@ -11,6 +15,7 @@
                         <h4>Login</h4>
                     </div>
                     <div class="card-body">
+<<<<<<< HEAD
                         <form>
                             <div class="form-group">
                                 <label for="email">Email address</label>
@@ -19,6 +24,22 @@
                             <div class="form-group">
                                 <label for="password">Password</label>
                                 <input type="password" class="form-control" id="password" placeholder="Password" required>
+=======
+                        <form action="{% url 'loginform' %}" method="POST">
+                            {% csrf_token %}
+                            {% for message in messages %}
+
+                            <div class="{{ message.tags }}">{{ message }}</div>
+                            
+                            {% endfor %}
+                            <div class="form-group">
+                                <label for="email">Email address</label>
+                                <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+>>>>>>> 5f3ab9e (Hope Haven L weApp)
                             </div>
                             <div class="form-group form-check">
                                 <input type="checkbox" class="form-check-input" id="rememberMe">
