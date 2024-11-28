@@ -11,7 +11,7 @@
      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Favicon -->
-    <link href="{% static 'images/favicon.ico' %}" rel="icon">
+    
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,6 +31,11 @@
 
     <!-- Template Stylesheet -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <!-- loginform css -->
+    <link href="{% static 'css/loginform.css' %}" rel="stylesheet" >
+    <!-- announcements -->
+     <link rel="stylesheet" href="{% static 'styles.css' %}">
 
     <style>
         .team-card {
@@ -106,16 +111,13 @@
                         <a href="{% url 'team' %}" class="dropdown-item">Our Team</a>
                         <a href="{% url 'testimonial' %}" class="dropdown-item">Testimonial</a>
                         <a href="{% url '404' %}" class="dropdown-item">404 Page</a>
+                        <a href="{% url 'announcement_list' %}" class="dropdown-item">Announcements</a>
                     </div>
                 </div>
                 <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
             </div>
-<<<<<<< HEAD
-            <a href="{% url '404' %}" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
-=======
+
             <a href="{% url 'loginform' %}" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
->>>>>>> 5f3ab9e (Hope Haven L weApp)
-        </div>
     </nav>
     <!-- Navbar End -->
 
@@ -225,6 +227,9 @@
 
     <!-- Template Javascript -->
     <script src="{% static 'js/main.js' %}"></script>
+
+
+   
 
 </body>
 </html>

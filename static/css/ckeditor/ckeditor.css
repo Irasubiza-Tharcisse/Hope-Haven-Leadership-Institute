@@ -1,0 +1,97 @@
+/* ckeditor_custom.css */
+
+/* General body styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9; /* Light background for better contrast */
+    padding: 20px; /* Padding for content */
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    color: #2c3e50; /* Darker color for headings */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Paragraphs */
+p {
+    margin: 15px 0; /* Spacing between paragraphs */
+    font-size: 16px; /* Base font size */
+}
+
+/* Links */
+a {
+    color: #2980b9; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Images */
+img {
+    max-width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Lists */
+ul, ol {
+    margin: 10px 0; /* Spacing for lists */
+    padding-left: 20px; /* Indentation */
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid #2980b9; /* Stylish left border */
+    padding-left: 15px; /* Padding for text */
+    color: #555; /* Text color */
+    font-style: italic; /* Italic style */
+    margin: 10px 0; /* Margin for blockquotes */
+}
+
+/* Code blocks */
+pre {
+    background-color: #f4f4f4; /* Light background for code */
+    border: 1px solid #ddd; /* Border for code block */
+    padding: 10px; /* Padding for code */
+    overflow-x: auto; /* Horizontal scroll for long lines */
+}
+
+/* Tables */
+table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Collapse borders */
+    margin: 20px 0; /* Margin for tables */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Border for cells */
+    padding: 8px; /* Padding for cells */
+    text-align: left; /* Left align text */
+}
+
+th {
+    background-color: #2980b9; /* Header background */
+    color: white; /* Header text color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Less padding on smaller screens */
+    }
+
+    h1 {
+        font-size: 24px; /* Adjust heading size */
+    }
+
+    h2 {
+        font-size: 20px; /* Adjust heading size */
+    }
+}

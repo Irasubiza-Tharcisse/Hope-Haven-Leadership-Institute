@@ -193,51 +193,45 @@
     <!-- Categories Start -->
 
 
-    <!-- Courses Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Activities</h6>
-                <h1 class="mb-5">Popular Activities</h1>
-            </div>
-                <div class="row g-4 justify-content-center">
-                    {% for activity in activities %}
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="course-item bg-light">
-                            <div class="position-relative overflow-hidden text-center"> <!-- Centering the image -->
-                                <img class="img-fluid mx-auto" src="{{ activity.image.url }}" width="100%" alt="" style="max-height: 200px; object-fit: cover;"> <!-- Centering the image -->
-                                <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                    <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                                    <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 pb-0">
-                                <h3 class="mb-0">{{ activity.assigned }}</h3>
-                                <div class="mb-3">
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small class="fa fa-star text-primary"></small>
-                                    <small>(123)</small>
-                                </div>
-                                <h5 class="mb-4">{{ activity.description }}</h5>
-                            </div>
-                            <div class="d-flex border-top">
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>{{ activity.supervisor }}</small>
-                                <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>{{ activity.time_range }}</small>
-                                <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>{{ activity.needed }}</small>
-                            </div>
+
+<!-- Carousel Start -->
+<div class="container-fluid p-0 mb-5">
+    <div class="owl-carousel header-carousel position-relative">
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="{% static 'images/carousel-1.jpg' %}" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-sm-10 col-lg-8">
+                            <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Leadership Institute.</h5>
+                            <h1 class="display-3 text-white animated slideInDown">Hope Haven Leadership and career communication site.</h1>
+                            <p class="fs-5 text-white mb-4 pb-2">There is a nation waiting for them. Continents waiting for them. Families waiting for them. Churches waiting for them.</p>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                            <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
                         </div>
                     </div>
-                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="{% static 'images/carousel-2.jpg' %}" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-sm-10 col-lg-8">
+                            <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Training student with the spirit of God and Leadership.</h5>
+                            <h1 class="display-3 text-white animated slideInDown">Our future generation , Our leaders</h1>
+                            <p class="fs-5 text-white mb-4 pb-2">Hope Haven Christian School has been working to transform Rwanda through Christ-centered education and discibleship since 2012.</p>
+                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                            <a href="" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Join Now</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Courses End -->
-
-
+</div>
+<!-- Carousel End -->
 
     <!-- Team Start -->
                 <!-- Team Start -->
@@ -298,6 +292,8 @@
         </div>
     </div>
     <!-- Testimonial End -->
+
+
 
 
 

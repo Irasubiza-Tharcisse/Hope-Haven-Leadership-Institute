@@ -1,5 +1,14 @@
 from django.db import models
+from django.contrib.auth.models import User
 
+
+
+class userProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    role_m = models.CharField(max_length=50)  # New field added
+    photo = models.ImageField(upload_to='profile_photos', blank=True, null=True)
+    def __str__(self):
+        return f'{self.user.username}'
 
 # Create your models here.
 class Leadership_team(models.Model):
@@ -12,14 +21,10 @@ class Leadership_team(models.Model):
         return f"{self.name}"
         # Customize the display
 
-
-# contact form
-class ContactForm(models.Model):
-    name = models.CharField(max_length=100)
-    email = models.EmailField()
-    class_name = models.CharField(max_length=100)
-    message = models.TextField()
-    created_at = models.DateTimeField(auto_now_add=True)
+class Announcements(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+    image = models.ImageField(upload_to='announcements/')
 
     def __str__(self):
-        return f"{self.name}"
+        return f"{self.title}"

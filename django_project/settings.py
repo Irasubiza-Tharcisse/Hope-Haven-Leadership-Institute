@@ -20,35 +20,26 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-<<<<<<< HEAD
-SECRET_KEY = ''
-=======
+
 SECRET_KEY = 'Thi is it'
->>>>>>> 5f3ab9e (Hope Haven L weApp)
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "527e3d70-cafb-45d5-8af8-b27d8dde317b-00-2cqejddqye189.spock.repl.co",
-    "527e3d70-cafb-45d5-8af8-b27d8dde317b-00-2cqejddqye189.spock.replit.dev",
-<<<<<<< HEAD
-    "https://527e3d70-cafb-45d5-8af8-b27d8dde317b-00-2cqejddqye189.spock.repl.co"
+    "41e707d9-9545-4545-8a13-4dbc8da04326-00-ihzrfr5gh5i1.kirk.repl.co",
+    "41e707d9-9545-4545-8a13-4dbc8da04326-00-ihzrfr5gh5i1.kirk.replit.dev",
 ]
+
 CSRF_TRUSTED_ORIGINS = [
-=======
-    "https://527e3d70-cafb-45d5-8af8-b27d8dde317b-00-2cqejddqye189.spock.repl.co","41e707d9-9545-4545-8a13-4dbc8da04326-00-ihzrfr5gh5i1.kirk.repl.co"
-]
-CSRF_TRUSTED_ORIGINS = [
-    "https://41e707d9-9545-4545-8a13-4dbc8da04326-00-ihzrfr5gh5i1.kirk.repl.co",
->>>>>>> 5f3ab9e (Hope Haven L weApp)
-    "https://527e3d70-cafb-45d5-8af8-b27d8dde317b-00-2cqejddqye189.spock.replit.dev/",
-    "https://527e3d70-cafb-45d5-8af8-b27d8dde317b-00-2cqejddqye189.spock.repl.co"
+    "https://41e707d9-9545-4545-8a13-4dbc8da04326-00-ihzrfr5gh5i1.kirk.replit.dev","https://41e707d9-9545-4545-8a13-4dbc8da04326-00-ihzrfr5gh5i1.kirk.repl.co"
 ]
 
 # Application definition
 
 INSTALLED_APPS = [
+    
     'Blogs',
     'contact_us',
     'leadership',
@@ -151,3 +142,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = '/loginform/'
+LOGOUT_REDIRECT_URL = 'loginform'  # Redirect to the homepage after logout

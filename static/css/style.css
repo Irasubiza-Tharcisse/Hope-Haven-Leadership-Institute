@@ -284,8 +284,6 @@
 }
 
 
-
-
 /*** Team ***/
 .team-item img {
     transition: .5s;
@@ -297,11 +295,11 @@
 
 
 /*** Testimonial ***/
-.testimonial-carousel::before,
-.testimonial-carousel::after {
+.testimonial-carousel::before {
     position: absolute;
     content: "";
     top: 0;
+    left: 0;
     height: 100%;
     width: 0;
     background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
@@ -309,7 +307,14 @@
 }
 
 .testimonial-carousel::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
     background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
 }
 
 @media (min-width: 768px) {
@@ -326,7 +331,6 @@
     }
 }
 
-/* Additional styles for the carousel items */
 .testimonial-carousel .owl-item .testimonial-text,
 .testimonial-carousel .owl-item.center .testimonial-text * {
     transition: .5s;

@@ -1,0 +1,27 @@
+{% extends 'base.html'  %}
+{%  load static %}
+{% block title %} Announcements {% endblock %}
+
+
+{% block content %}
+
+
+    <h1>Announcements</h1>
+    <a href="{% url 'announcement' %}">Create New Announcement</a>
+
+    <div class="announcement-list">
+        {% for announcement in announcements %}
+            <div class="announcement">
+                <h2>{{ announcement.title }}</h2>
+                <div class="description">{{ announcement.description|safe }}</div> <!-- Use |safe to render HTML -->
+                {% if announcement.image %}
+                    <img src="{{ announcement.image.url }}" alt="{{ announcement.title }}" style="max-width: 300px;">
+                {% endif %}
+                <hr>
+            </div>
+        {% empty %}
+            <p>No announcements available.</p>
+        {% endfor %}
+    </div>
+
+    {% endblock %}
